@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Sarala:wght@400;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+:root {
+  --blue: #142dbe;
+  --primary: #0048b6;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #da0a10;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #f1f1f1;
+  --gray-dark: #343a40;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+}
+
+
+body {
+  font-size: 100%;
+  background: linear-gradient(165.15deg, var(--cyan) 15.62%, var(--gray) 90.61%);
+  background: url('background.jpg') no-repeat;
+  background-color: #dadada;
+  background-position: top center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}
+
+.fundo-cinza {
+  background-color: var(--gray);
+  border-radius: 5px;
+}
+
+
+.cabecalho {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2vh;
+}
+
+.cabecalho-imagem {
+  height: 11vh;
+  filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.4)); /* Sombra apenas ao redor do conteúdo visível */
+}
+
+
+
+.cabecalho-menu {
+  display: flex;
+  gap: 10px;
+}
+
+.cabecalho-menu-item {
+  font-family: 'Sarala', sans-serif;
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 1.0em;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona a sombra */
+}
+
+.conteudo {
+  margin-bottom: 1%;
+/*  border-top: 0.4px solid var(--primary);*/
+}
+
+.conteudo-principal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.conteudo-principal-escrito {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  gap: 5%;
+}
+
+.conteudo-principal-escrito-titulo {
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  font-size: 1.5em;
+  color: var(--red);
+  margin-right: 15px;
+  justify-self: end;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona a sombra */
+}
+.conteudo-principal-escrito-subtitulo {
+  font-family: 'Sarala', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--primary);
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 10px; 
+  text-align: center;
+}
+
+.conteudo-principal-escrito-botao {
+  background-color: var(--green);
+  width: 200px;
+  height: 7vh;
+  border: none;
+  box-shadow: 4px 5px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 20px;
+  font-family: 'Sarala', sans-serif;
+  font-weight: 400;
+  font-size: 100%;
+  color: var(--white);
+  margin-top: 40px;
+  
+  
+}
+
+.conteudo-principal-escrito-botao:hover {
+  background-color: var(--primary);
+}
+
+.conteudo-principal-imagem {
+  height: 48vw;
+  filter: drop-shadow(4px 4px 5px rgba(0, 0, 0, 0.4)); /* Sombra apenas ao redor do conteúdo visível */
+}
+
+.conteudo-secundario {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  margin-top: 1px;
+  margin-left: 15px;
+  margin-right: 15px;
+   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona a sombra */
+}
+
+.conteudo-secundario-titulo {
+  /*border-top: 0.4px solid #2f0877*/
+  padding-top: 40px;
+  font-family: 'Righteous', cursive;
+  font-weight: 400;
+  font-size: 24px;
+  color: var(--gray-dark);
+  margin-bottom: 16px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Adiciona a sombra */
+}
+
+.conteudo-secundario-paragrafo {
+  font-family: 'Sarala', sans-serif;
+  font-weight: 300;
+  font-size: 18px;
+  color: var(--dark);
+  margin: 10px;
+  padding: 10px;
+  
+}
+
+.rodape {
+    padding: 25px;
+ /*   border-top: 0.4px solid #FFF2E7;*/
+}
+
+.rodape-imagem {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  background-color: var(--gray);
+  border-radius: 5px;
+}
+
+.rodape-texto {
+  font-family: 'Sarala', sans-serif;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--dark);
+  text-align: center;
+  margin-top: 10px;
+}
