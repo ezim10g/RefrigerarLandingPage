@@ -183,3 +183,16 @@ a:focus-visible, button:focus-visible { outline: 3px solid #f2b544; outline-offs
   .rodape-social-link { width: 46px; height: 46px; }
   .rodape-base { min-height: 58px; padding: 16px 0; }
 }
+
+.rodape-marcas-faixa { padding: 30px 0 32px; border-bottom: 1px solid rgba(255,255,255,.14); text-align: center; }
+.rodape-marcas-faixa h2 { margin: 0; color: #fff; font-family: 'Manrope', sans-serif; font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 800; }
+.rodape-marcas-faixa .rodape-marcas { width: 100%; max-width: none; grid-template-columns: repeat(8, minmax(0, 1fr)); gap: 16px; margin: 22px 0 0; }
+.rodape-marcas-faixa .rodape-marca { height: 58px; max-width: none; padding: 7px 12px; border-radius: 9px; }
+@media (max-width: 900px) {
+  .rodape-marcas-faixa .rodape-marcas { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+@media (max-width: 620px) {
+  .rodape-marcas-faixa { padding: 26px 0; }
+  .rodape-marcas-faixa .rodape-marcas { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 18px; }
+  .rodape-marcas-faixa .rodape-marca { height: 52px; padding: 6px 9px; }
+}
