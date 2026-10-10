@@ -87,35 +87,35 @@ a:focus-visible, button:focus-visible { outline: 3px solid #f2b544; outline-offs
 .conteudo-secundario-paragrafo strong { color: var(--ink); }
 .conteudo-secundario iframe { max-width: 100%; border-radius: 14px; }
 .rodape {
-  margin-top: 20px; padding: 0 clamp(20px, 5vw, 76px);
-  background: #fff; border-top: 1px solid var(--border);
+  margin-top: 20px;
+  padding: 0 clamp(20px, 4vw, 56px);
+  background: #172b72;
+  color: #fff;
+  border-top: 4px solid var(--red);
 }
-.rodape-conteudo { width: min(1180px, 100%); margin: 0 auto; }
-.rodape-marcas-bloco { padding: 54px 0 48px; text-align: center; }
-.rodape-etiqueta { margin: 0 0 8px; color: var(--blue); font-size: .72rem; line-height: 1.4; font-weight: 800; letter-spacing: .14em; }
-.rodape-titulo { max-width: 650px; margin: 0 auto; color: var(--ink); font-family: 'Manrope', sans-serif; font-size: clamp(1.35rem, 2.4vw, 1.9rem); font-weight: 800; line-height: 1.25; letter-spacing: -.035em; }
-.rodape-marcas { width: min(980px, 100%); margin: 30px auto 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: center; justify-items: center; gap: 22px 28px; }
-.rodape-marca { width: 100%; max-width: 190px; height: 64px; padding: 7px 12px; object-fit: contain; display: block; border: 1px solid #edf0f5; border-radius: 12px; background: #fff; }
-.rodape-marca-electrolux { max-width: 230px; }
-.rodape-marca-ge { max-width: 105px; }
-.rodape-marca-bosch, .rodape-marca-continental { max-width: 170px; }
-.rodape-contato { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, .78fr); align-items: center; gap: clamp(30px, 6vw, 86px); padding: 48px clamp(24px, 5vw, 64px); border-radius: 24px; background: #122b75; color: #fff; }
-.rodape-contato .rodape-etiqueta { color: #b9c9ff; }
-.rodape-contato .rodape-titulo { margin: 0; color: #fff; max-width: 540px; }
-.rodape-descricao { margin-top: 14px; color: rgba(255,255,255,.76); max-width: 420px; }
-.rodape-links { display: grid; gap: 10px; }
-.rodape-link { min-width: 0; display: grid; grid-template-columns: 44px minmax(0,1fr) 18px; align-items: center; gap: 13px; padding: 13px 15px; border: 1px solid rgba(255,255,255,.16); border-radius: 14px; color: #fff; background: rgba(255,255,255,.06); transition: background .18s ease, border-color .18s ease, transform .18s ease; }
-.rodape-link:hover { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.32); transform: translateY(-1px); }
-.rodape-link-icone { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 12px; background: rgba(255,255,255,.12); color: #fff; font-size: 1.35rem; }
-.rodape-google-icone { font-size: 1.2rem; }
-.rodape-link strong, .rodape-link small { display: block; }
-.rodape-link strong { font-size: .95rem; font-weight: 700; }
-.rodape-link small { margin-top: 1px; color: rgba(255,255,255,.72); font-size: .82rem; overflow-wrap: anywhere; }
-.rodape-seta { color: rgba(255,255,255,.65); font-size: 1.05rem; }
-.rodape-base { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 24px 0; color: var(--muted); font-size: .82rem; }
-.rodape-assinatura { color: var(--ink); font-family: 'Manrope', sans-serif; font-size: .95rem; font-weight: 800; letter-spacing: .08em; }
-.rodape-assinatura span { color: var(--red); }
-.rodape-base p { margin: 0; text-align: right; }
+.rodape-conteudo { width: min(1240px, 100%); margin: 0 auto; }
+.rodape-colunas {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(220px, 1fr) minmax(190px, .8fr);
+  gap: clamp(28px, 4vw, 60px);
+  padding: 42px 0 36px;
+}
+.rodape-assinatura { display: inline-flex; align-items: center; gap: 9px; color: #fff; font-family: 'Manrope', sans-serif; font-size: 1.25rem; font-weight: 800; letter-spacing: -.025em; }
+.rodape-assinatura .rodape-nome { color: #fff; }
+.rodape-descricao { margin-top: 16px; max-width: 390px; color: #d3dcf6; font-size: .92rem; line-height: 1.65; }
+.rodape-informacoes h2, .rodape-redes h2 { margin: 2px 0 20px; color: #fff; font-family: 'Manrope', sans-serif; font-size: 1rem; font-weight: 800; }
+.rodape-info-item { display: flex; align-items: flex-start; gap: 12px; margin: 0 0 15px; color: #d3dcf6; font-size: .92rem; line-height: 1.5; }
+.rodape-info-item ion-icon { flex: 0 0 auto; margin-top: 2px; color: #7cc9ff; font-size: 1.2rem; }
+.rodape-marcas { width: min(390px, 100%); margin: 20px 0 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: center; justify-items: center; gap: 8px; }
+.rodape-marca { width: 100%; height: 40px; padding: 5px 7px; object-fit: contain; display: block; border: 1px solid rgba(255,255,255,.12); border-radius: 7px; background: #fff; }
+.rodape-marca-electrolux { max-width: 100%; }
+.rodape-marca-ge { max-width: 100%; }
+.rodape-marca-bosch, .rodape-marca-continental { max-width: 100%; }
+.rodape-social { display: flex; align-items: center; gap: 12px; }
+.rodape-social-link { width: 48px; height: 48px; display: inline-grid; place-items: center; border-radius: 50%; color: #fff; background: rgba(255,255,255,.13); font-size: 1.35rem; transition: background .18s ease, transform .18s ease; }
+.rodape-social-link:hover { background: var(--blue); transform: translateY(-2px); }
+.rodape-base { min-height: 64px; display: flex; align-items: center; justify-content: center; padding: 18px 0; border-top: 1px solid rgba(255,255,255,.14); color: #bdc9e7; font-size: .82rem; text-align: center; }
+.rodape-base p { margin: 0; }
 #avaliacoes-google { scroll-margin-top: 24px; }
 @media (min-width: 900px) {
   .conteudo-secundario { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: stretch; gap: 16px; }
