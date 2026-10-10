@@ -150,3 +150,20 @@ a:focus-visible, button:focus-visible { outline: 3px solid #f2b544; outline-offs
   html { scroll-behavior: auto; }
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+@media (max-width: 900px) {
+  .rodape-contato { grid-template-columns: 1fr; gap: 28px; }
+  .rodape-contato .rodape-titulo { max-width: 680px; }
+}
+@media (max-width: 700px) {
+  .rodape { padding: 0 14px; }
+  .rodape-marcas-bloco { padding: 38px 0 34px; }
+  .rodape-marcas { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 22px; }
+  .rodape-marca { height: 58px; max-width: 100%; padding: 6px 8px; border-radius: 10px; }
+  .rodape-marca-electrolux, .rodape-marca-ge { max-width: 100%; }
+  .rodape-contato { padding: 28px 18px; gap: 24px; border-radius: 18px; }
+  .rodape-contato .rodape-titulo { font-size: 1.5rem; }
+  .rodape-link { grid-template-columns: 38px minmax(0,1fr) 16px; gap: 10px; padding: 11px; }
+  .rodape-link-icone { width: 38px; height: 38px; }
+  .rodape-base { min-height: 0; flex-direction: column; align-items: flex-start; gap: 8px; padding: 22px 0; }
+  .rodape-base p { text-align: left; }
+}
