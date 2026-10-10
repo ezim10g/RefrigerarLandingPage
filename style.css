@@ -136,7 +136,9 @@ a:focus-visible, button:focus-visible { outline: 3px solid #f2b544; outline-offs
   .conteudo-secundario-titulo { margin-top: 18px; }
   .conteudo-secundario-paragrafo { padding: 17px; }
   .rodape { padding: 26px 18px; }
-  
+  .rodape-marcas { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 18px; }
+  .rodape-marca { height: 56px; max-width: 160px; }
+  .rodape-marca-ge { max-width: 86px; }
 }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
