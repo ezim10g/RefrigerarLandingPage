@@ -167,3 +167,19 @@ a:focus-visible, button:focus-visible { outline: 3px solid #f2b544; outline-offs
   .rodape-base { min-height: 0; flex-direction: column; align-items: flex-start; gap: 8px; padding: 22px 0; }
   .rodape-base p { text-align: left; }
 }
+
+@media (max-width: 900px) {
+  .rodape-colunas { grid-template-columns: minmax(0, 1.2fr) minmax(200px, 1fr); gap: 30px; }
+  .rodape-redes { grid-column: 2; }
+}
+@media (max-width: 620px) {
+  .rodape { padding: 0 22px; }
+  .rodape-colunas { grid-template-columns: 1fr; gap: 28px; padding: 32px 0 28px; }
+  .rodape-marca-bloco, .rodape-informacoes, .rodape-redes { grid-column: auto; }
+  .rodape-descricao { margin-top: 10px; }
+  .rodape-marcas { width: min(390px, 100%); margin-top: 16px; gap: 7px; }
+  .rodape-marca { height: 38px; padding: 4px 5px; }
+  .rodape-informacoes h2, .rodape-redes h2 { margin-bottom: 14px; }
+  .rodape-social-link { width: 46px; height: 46px; }
+  .rodape-base { min-height: 58px; padding: 16px 0; }
+}
