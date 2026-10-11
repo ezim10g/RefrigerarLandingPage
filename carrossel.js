@@ -24,7 +24,7 @@
   function iniciarRotacao() {
     window.clearInterval(temporizador);
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      temporizador = window.setInterval(() => mostrarSlide(slideAtual + 1), 4000);
+      temporizador = window.setInterval(() => mostrarSlide(slideAtual + 1), 5000);
     }
   }
 
