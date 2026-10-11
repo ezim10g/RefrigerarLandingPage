@@ -289,3 +289,56 @@ a:focus-visible, button:focus-visible { outline: 3px solid #f2b544; outline-offs
 @media (prefers-reduced-motion: reduce) {
   .carrossel-slide { transition: none; }
 }
+
+
+/* Ajustes do layout dos slides */
+.conteudo-principal.carrossel {
+  aspect-ratio: 1024 / 572;
+  min-height: 0;
+  background: #fff;
+}
+.carrossel-slide { background: #fff; }
+.carrossel-slide .carrossel-imagem img { object-fit: contain; }
+.carrossel-slide:first-child .carrossel-imagem {
+  left: auto;
+  right: 0;
+  width: 50%;
+}
+.carrossel-slide:first-child .carrossel-imagem img {
+  object-fit: contain;
+  object-position: center right;
+}
+.carrossel-slide:first-child .carrossel-texto {
+  width: 46%;
+  margin: 0 0 0 clamp(28px, 5vw, 64px);
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+}
+@media (max-width: 700px) {
+  .conteudo-principal.carrossel {
+    aspect-ratio: 450 / 430;
+    min-height: 0;
+  }
+  .carrossel-slide:first-child .carrossel-imagem {
+    top: auto;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 52%;
+  }
+  .carrossel-slide:first-child .carrossel-imagem img {
+    object-position: center bottom;
+  }
+  .carrossel-slide:first-child .carrossel-texto {
+    width: calc(100% - 32px);
+    margin: 18px 16px 0;
+    padding: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+  .carrossel-slide:not(:first-child) .carrossel-imagem img {
+    object-fit: contain;
+  }
+}
