@@ -199,6 +199,7 @@ a:focus-visible, button:focus-visible { outline: 3px solid #f2b544; outline-offs
 
 
 /* Carrossel da página inicial */
+.carrossel-area { position: relative; }
 .conteudo-principal.carrossel {
   position: relative;
   display: block;
@@ -277,13 +278,16 @@ a:focus-visible, button:focus-visible { outline: 3px solid #f2b544; outline-offs
   .carrossel-texto .conteudo-principal-escrito-subtitulo { font-size: clamp(1.25rem, 6vw, 1.7rem); }
   .carrossel-texto p { margin-top: 10px; font-size: .9rem; line-height: 1.45; }
   .carrossel-botao {
-    left: 50%;
-    bottom: 48px;
-    width: calc(100% - 40px);
+    position: relative;
+    left: auto;
+    bottom: auto;
+    display: flex;
+    width: calc(100% - 24px);
     min-width: 0;
-    transform: translateX(-50%);
+    margin: 14px auto 0;
+    transform: none;
   }
-  .carrossel-botao:hover { transform: translateX(-50%) translateY(-2px); }
+  .carrossel-botao:hover { transform: translateY(-2px); }
   .carrossel-indicadores { right: 0; left: 0; bottom: 17px; justify-content: center; }
 }
 @media (prefers-reduced-motion: reduce) {
