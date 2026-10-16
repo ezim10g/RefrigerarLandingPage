@@ -27,6 +27,22 @@
     gtag('js', new Date());
     gtag('config', 'AW-16858255737');
   </script>
+  <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16858255737/JxqtCKKCo58dEPmi0uY-',
+        'value': 1.0,
+        'currency': 'BRL',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
   
 </head>
 <body>
@@ -73,7 +89,7 @@
         <button type="button" class="carrossel-indicador" aria-label="Mostrar slide 3" aria-current="false" data-slide="2"></button>
       </div>
     </section>
-    <a href="go-chat.html" class="conteudo-principal-escrito-botao carrossel-botao">
+    <a href="go-chat.html" onclick="return gtag_report_conversion(this.href)" class="conteudo-principal-escrito-botao carrossel-botao">
       <span>Solicitar atendimento</span>
       <ion-icon name="chatbubbles-outline" size="large" aria-hidden="true"></ion-icon>
     </a>
