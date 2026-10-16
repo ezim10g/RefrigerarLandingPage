@@ -108,9 +108,18 @@
     <script nomodule src="https://unpkg.com/ionicons@latest/dist/ionicons/ionicons.js"></script>
     
     <script>
-      // Aguarda 1 segundo antes de abrir o WhatsApp.
+      const mensagem = "Olá, vi o site da Refrigerar e gostaria de agendar uma visita técnica em minha residência para saber o valor do diagnóstico.";
+
+      const parametros = new URLSearchParams({
+        phone: "5511966096910",
+        text: mensagem,
+        type: "phone_number",
+        app_absent: "0"
+      });
+
       window.setTimeout(function () {
-      window.location.href = "https://api.whatsapp.com/send/?phone=5511966096910&amp;text=Olá%2C+vi+o+site+da+Refrigerar+e+gostaria+de+agendar+uma+visita+técnica+em+minha+residência+para+saber+o+valor+do+diagnóstico.&amp;type=phone_number&amp;app_absent=0";
+        window.location.href =
+          `https://api.whatsapp.com/send/?${parametros.toString()}`;
       }, 2000);
     </script>
 </body>
