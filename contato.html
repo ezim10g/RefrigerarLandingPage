@@ -21,6 +21,22 @@
     gtag('config', 'AW-16858255737');
   </script>
   <script>
+    function gtag_report_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-16858255737/JxqtCKKCo58dEPmi0uY-',
+        'value': 1.0,
+        'currency': 'BRL',
+        'event_callback': callback
+      });
+      return false;
+    }
+  </script>
+  <script>
     gtag('event', 'conversion', {'send_to': 'AW-16858255737/ijnfCM_A1_IaEPmi0uY-'});
   </script>
 </head>
@@ -37,7 +53,7 @@
       <div class="conteudo-principal-escrito">
         <h1 id="contato-titulo" class="conteudo-principal-escrito-subtitulo">Fale com um técnico da Refrigerar</h1>
         <p>Precisa de ajuda com sua geladeira, máquina de lavar ou outro eletrodoméstico? Entre em contato para explicar o problema e consultar a disponibilidade de uma visita técnica.</p>
-        <a class="conteudo-principal-escrito-botao" href="https://api.whatsapp.com/send/?phone=5511966096910&amp;text=Ol%C3%A1%2C+vi+o+site+da+Refrigerar+e+gostaria+de+solicitar+um+diagn%C3%B3stico+e+saber+sobre+valor+para+enviar+um+profissional+ao+meu+endere%C3%A7o.&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer"><span>Conversar pelo WhatsApp</span><ion-icon name="logo-whatsapp" size="large" aria-hidden="true"></ion-icon></a>
+        <a class="conteudo-principal-escrito-botao" onclick="return gtag_report_conversion(this.href)" href="https://api.whatsapp.com/send/?phone=5511966096910&amp;text=Ol%C3%A1%2C+vi+o+site+da+Refrigerar+e+gostaria+de+solicitar+um+diagn%C3%B3stico+e+saber+sobre+valor+para+enviar+um+profissional+ao+meu+endere%C3%A7o.&amp;type=phone_number&amp;app_absent=0" target="_blank" rel="noopener noreferrer"><span>Conversar pelo WhatsApp</span><ion-icon name="logo-whatsapp" size="large" aria-hidden="true"></ion-icon></a>
         <p><strong>Telefone:</strong> (11) 96609-6910</p>
       </div>
       <img class="conteudo-principal-imagem" src="eletrodomesticos.png" alt="Geladeira, máquina de lavar e micro-ondas">
