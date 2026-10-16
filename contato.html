@@ -22,17 +22,29 @@
   </script>
   <script>
     function gtag_report_conversion(url) {
-      var callback = function () {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
+      // Abre a nova aba durante o clique do usuário para evitar bloqueio de pop-up.
+      var newWindow = window.open('about:blank', '_blank');
+      var redirect = function () {
+        if (typeof url === 'undefined') return;
+        if (newWindow && !newWindow.closed) {
+          newWindow.location.href = url;
+        } else {
+          // Alternativa caso o navegador bloqueie a nova aba.
+          window.location.href = url;
         }
       };
-      gtag('event', 'conversion', {
-        'send_to': 'AW-16858255737/JxqtCKKCo58dEPmi0uY-',
-        'value': 1.0,
-        'currency': 'BRL',
-        'event_callback': callback
-      });
+
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-16858255737/JxqtCKKCo58dEPmi0uY-',
+          'value': 1.0,
+          'currency': 'BRL',
+          'event_callback': redirect,
+          'event_timeout': 2000
+        });
+      } else {
+        redirect();
+      }
       return false;
     }
   </script>
